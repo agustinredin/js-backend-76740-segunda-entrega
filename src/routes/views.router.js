@@ -12,26 +12,26 @@ router.get('/', (req, res) => {
   res.render('home', {});
 });
 
-router.post('/add-product', (req, res) => {
-//PREGUNTA: si incluyo el array aca lo guardo aca directamente o lo exporto de algun archivo?
+// router.post('/add-product', (req, res) => {
+// //PREGUNTA: si incluyo el array aca lo guardo aca directamente o lo exporto de algun archivo?
 
-    // const {name, price, description} = req.body
+//     const {name, price } = req.body
 
-    // const newProduct = {
-    //     id: products.length + 1,
-    //     name,
-    //     price,
-    // }
-    // products.push(newProduct)
+//     const newProduct = {
+//         id: products.length + 1,
+//         name,
+//         price,
+//     }
+//     products.push(newProduct)
 
-    // req.io.emit('newProduct', products)
-    // Vincular el endpoint con el socket
+//     req.io.emit('newProduct', products)
+//     Vincular el endpoint con el socket
 
-    res.status(201).json({
-        message: "Producto creado con éxito",
-        product: products
-    })
-})
+//     res.status(201).json({
+//         message: "Producto creado con éxito",
+//         product: products
+//     })
+// })
 
 
 router.get('/realtimeproducts', (req, res) => {

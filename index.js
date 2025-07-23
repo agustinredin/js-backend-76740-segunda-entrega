@@ -27,6 +27,7 @@ io.on('connection', (socket) => {
 
     socket.on('addProduct', (data) => {
         products.push({...data})
+        socket.emit('products', products)
     })
 
     socket.on('getProducts', () => {
