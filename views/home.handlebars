@@ -1,0 +1,11 @@
+<div class="container">
+    <p>Segunda entrega - productos con websockets</p>
+    <form id="products-form" action="/add-product">
+        <input type="text" name="name">
+        <input type="number" inputmode="numeric" max="100" name="price">
+        <button type="submit">Enviar</button>
+    </form>
+    <ul id="products-list"></ul>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/index.js"></script>
