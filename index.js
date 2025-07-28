@@ -18,19 +18,6 @@ const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-const products = [];
-
 const io = new Server(server);
 
-io.on('connection', (socket) => {
-    console.log('New Client connected: ', socket.id)
-
-    socket.on('addProduct', (data) => {
-        products.push({...data})
-        socket.emit('products', products)
-    })
-
-    socket.on('getProducts', () => {
-        socket.emit('products', products)
-    })
-})
+app.set('io', io)

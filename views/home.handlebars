@@ -1,11 +1,7 @@
 <div class="container">
     <p>Segunda entrega - productos con websockets</p>
-    <form id="products-form">
-        <input type="text" id="name" name="name">
-        <input type="number" id="price" inputmode="numeric" max="100" name="price">
-        <button type="submit">Enviar</button>
-    </form>
-    <ul id="products-list"></ul>
+
+    {{#each products}}
+    <li>{{this.name}} - {{this.price}} (ID: {{this.id}})</li>
+    {{/each}}
 </div>
-<script src="/socket.io/socket.io.js"></script>
-<script src="./index.js"></script>
