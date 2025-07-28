@@ -20,4 +20,5 @@ const server = app.listen(PORT, () => {
 
 const io = new Server(server);
 
+//.set guarda en el objeto req.app y se puede recuperar en cada handler
 app.set('io', io)
